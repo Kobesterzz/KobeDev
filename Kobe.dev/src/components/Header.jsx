@@ -1,15 +1,26 @@
-import '../css/index.css'
+import '../css/Components.css'
 
 function Header() {
 
   return (
     <>
       <div className="header">
-        <div>
-            <div><h1>Kobe.dev</h1></div>
+        <div className='spacing'>
+          <div className='left'>
+              <div className='logoArea'><h1>Kobe.DEV</h1></div>
+              <div className='list'>
+                <a>Projects</a>
+                <a>About Me</a>
+                <a>Experience</a>
+                <a>More</a>
+              </div>
+          </div>
+          <div className='right'>
+            <img></img>
+          </div>
         </div>
-        <div></div>
       </div>
+
     </>
   )
 }

@@ -1,8 +1,37 @@
 *{
-    background-color: aqua;
+    align-items: center;
+    padding: 0;
 }
 
 .header{
-    height:20vh;
-    border: 2px solid red;
+    height:7vh;
+    width:100%;
+    background-color: rgb(60, 60, 60);
+}
+
+.spacing{
+    padding-left:2%;
+    padding-right:2%;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    
+}
+
+.logoArea{
+   color: #ff640b;
+   font-size: 10px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+a{
+    color: #bbbbbb;
 }
