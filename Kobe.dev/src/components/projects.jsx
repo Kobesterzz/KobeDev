@@ -89,7 +89,7 @@ function Projects() {
           {slides.map((_, index) => (
             <div
               key={index}
-              className="dot"
+              className={`dot ${index === currentIndex ? "active" : "inactive"}`}
               onClick={() => setCurrentIndex(index)}
             >
               <div
@@ -102,6 +102,31 @@ function Projects() {
           ))}
         </div>
       </div>
+
+
+        {/*Arrows*/}
+
+        <button 
+          className="carousel-arrow left"
+          onClick = {() =>
+              setCurrentIndex(
+                currentIndex === 0 ? slides.length - 1 : currentIndex - 1
+              )
+          }
+        >
+          ❮
+        </button>
+
+        <button
+          className="carousel-arrow right"
+          onClick = {() =>
+              setCurrentIndex(
+                currentIndex === 0 ? slides.length - 1 : currentIndex + 1
+              )
+          }
+        >
+          ❯
+        </button>
     </div>
   );
 
