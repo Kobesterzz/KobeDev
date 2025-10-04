@@ -1,4 +1,5 @@
 import '../css/Components.css'
+import Epfp from '../img/Epfp.png'
 
 function Header() {
 
@@ -16,7 +17,7 @@ function Header() {
               </div>
           </div>
           <div className='right'>
-            <img></img>
+            <img src={Epfp} className='profile-pic'></img>
           </div>
         </div>
       </div>
