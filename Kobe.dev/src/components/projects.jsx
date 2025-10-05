@@ -15,8 +15,8 @@ function Projects() {
       img: VeloSouthHeader,
       title: "Velo South Project",
       description:
-        "In a floating city where the rich discard their waste — and people — Rudo is framed for murder...",
-      buttonText: "Start Watching E1",
+        "VeloSouth is a commissioned website created for a passionate bicycling club. ",
+        buttonText: "Explore Project",
     },
     {
       img: BitCoinNavHeader,
@@ -30,13 +30,13 @@ function Projects() {
       title: "NuCamp Website",
       description:
         "A responsive and modern website built for the NuCamp bootcamp community.",
-      buttonText: "View Case Study",
+      buttonText: "Explore Project",
     },
     {
       img: ArtLabHeader,
       title: "ArtLab Experience",
       description: "Interactive art experiments that push creativity and design.",
-      buttonText: "Check It Out",
+      buttonText: "Explore Project",
     },
   ];
 
@@ -121,7 +121,7 @@ function Projects() {
           className="carousel-arrow right"
           onClick = {() =>
               setCurrentIndex(
-                currentIndex === 0 ? slides.length - 1 : currentIndex + 1
+                currentIndex === 0 ? slides.length - 1 : currentIndex + 1 
               )
           }
         >
