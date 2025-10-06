@@ -17,7 +17,10 @@ function Header() {
               </div>
           </div>
           <div className='right'>
-            <img src={Epfp} className='profile-pic'></img>
+            <div class="profile-container">
+              <img src={Epfp} className='profile-pic'></img>
+              <span class="notification-dot"></span>
+            </div>
           </div>
         </div>
       </div>

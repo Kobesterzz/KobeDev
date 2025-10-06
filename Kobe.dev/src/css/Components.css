@@ -22,7 +22,7 @@
 
 /* Spacing between left and right */
 .spacing {
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,21 +61,17 @@
 }
 
 .profile-pic {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   aspect-ratio: 1 / 1;      /* ensures it's always a perfect square */
   border-radius: 50%;       /* makes it circular */
   object-fit: cover;        /* keeps proportions inside the circle */
-  border: 1px solid #ff8c00;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: block;           /* prevents inline spacing bugs */
 }
 
-.profile-pic:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 6px #ff8c00;
-}
+
 
 /*Projects*/
 
@@ -238,4 +234,49 @@
   width: 0%;
   background: #ff640b;
   transition: width linear;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Notification dot */
+.notification-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  background-color: #ef4423;
+  border: 2px solid #272727; /* clean edge */
+  border-radius: 50%;
+}
+
+
+/*about Me section*/
+.aboutMe{
+  display:flex;
+  flex-direction: row;
+  margin-left: 4%;
+  column-gap: 60px;
+  
+}
+
+.MeIMG{
+  width:150px;
+  aspect-ratio: 1 / 1;      
+  border-radius: 50%;       
+  object-fit: cover;  
+}
+
+
+.Name{
+  font-size: 60px;
+  color: #ff8c00;
+}
+
+.title{
+  font-size: 30px;
+  color: #cccccc;
 }
