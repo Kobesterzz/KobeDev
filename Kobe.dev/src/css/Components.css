@@ -299,47 +299,61 @@
 /*recently Watched*/
 
 .anime-section {
-  background-color: #000000;
+  margin-top: 40px;
+  padding: 0 40px;
   color: #fff;
-  padding: 20px;
-  font-family: "Maven Pro", sans-serif;
+  text-align: left;
 }
 
 .section-title {
-  margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 5px;
 }
 
 .carousel {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
 }
 
 .anime-card {
   flex: 0 0 auto;
   width: 180px;
   text-align: center;
-  border-radius: 8px;
-  background-color: #000000;
-  padding: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anime-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .anime-card:hover {
   transform: scale(1.05);
 }
 
-.anime-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-
 .anime-card p {
+  margin-top: 8px;
   font-size: 0.9rem;
   color: #ccc;
 }
+
+
+

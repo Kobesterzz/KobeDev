@@ -12,7 +12,7 @@ export default function RecentlyWatched() {
             lists {
               entries {
                 media {
-                  title { romaji }
+                  title { english romaji }
                   coverImage { large }
                   siteUrl
                 }
@@ -41,8 +41,8 @@ export default function RecentlyWatched() {
   }, []);
 
   return (
-    <section className="anime-section">
-      <h2 className="section-title">Recently Watched</h2>
+   <section className="anime-section">
+      <h2 className="section-title">My Recently Watched</h2>
       <div className="carousel">
         {animeList.map((item, index) => (
           <div key={index} className="anime-card">
@@ -54,5 +54,6 @@ export default function RecentlyWatched() {
         ))}
       </div>
     </section>
+  
   );
 }
