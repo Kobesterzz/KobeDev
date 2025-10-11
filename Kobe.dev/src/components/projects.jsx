@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "../css/Components.css";
-import VeloSouthHeader from "../img/ProjectImg/VeloSouthHeader.jpg";
-import BitCoinNavHeader from "../img/ProjectImg/BitCoinNavHeader.jpg";
+import bycylcle from "../img/ProjectImg/bycycle.jpg";
+import Crypto from "../img/ProjectImg/Crypto.jpg";
 import NuCampHeader from "../img/ProjectImg/NuCampHeader.jpg";
-import ArtLabHeader from "../img/ProjectImg/ArtLabHeader.jpg";
+import art from "../img/ProjectImg/art.jpg";
 
 function Projects() {
   const slideDuration = 10000; // 10s
@@ -12,14 +12,14 @@ function Projects() {
 
   const slides = [
     {
-      img: VeloSouthHeader,
+      img: bycylcle,
       title: "Velo South Project",
       description:
         "VeloSouth is a commissioned website created for a passionate bicycling club. ",
         buttonText: "Explore Project",
     },
     {
-      img: BitCoinNavHeader,
+      img: Crypto,
       title: "Crypto Dashboard",
       description:
         "Track live Bitcoin prices and manage your portfolio in real time.",
@@ -33,7 +33,7 @@ function Projects() {
       buttonText: "Explore Project",
     },
     {
-      img: ArtLabHeader,
+      img: art,
       title: "ArtLab Experience",
       description: "Interactive art experiments that push creativity and design.",
       buttonText: "Explore Project",
@@ -64,70 +64,77 @@ function Projects() {
   }, [currentIndex]);
 
    return (
-    <div className="carousel-container">
-      {/* Images */}
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide.img}
-          alt={slide.title}
-          className={`carousel-image ${index === currentIndex ? "active" : ""}`}
-        />
-      ))}
+    <>
 
-      {/* Gradient Overlay */}
-      <div className="carousel-overlay"></div>
 
-      {/* Text Content */}
-      <div className="carousel-content">
-        <h1>{slides[currentIndex].title}</h1>
-        <p>{slides[currentIndex].description}</p>
-        <button>{slides[currentIndex].buttonText}</button>
+      <div className="carousel-container">
 
-        {/* Progress Bars */}
-        <div className="carousel-dots">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${index === currentIndex ? "active" : "inactive"}`}
-              onClick={() => setCurrentIndex(index)}
-            >
+        
+
+        {/* Images */}
+        {slides.map((slide, index) => (
+          <img
+            key={index}
+            src={slide.img}
+            alt={slide.title}
+            className={`carousel-image ${index === currentIndex ? "active" : ""}`}
+          />
+        ))}
+
+        {/* Gradient Overlay */}
+        <div className="carousel-overlay"></div>
+
+        {/* Text Content */}
+        <div className="carousel-content">
+          <h1>{slides[currentIndex].title}</h1>
+          <p>{slides[currentIndex].description}</p>
+          <button>{slides[currentIndex].buttonText}</button>
+
+          {/* Progress Bars */}
+          <div className="carousel-dots">
+            {slides.map((_, index) => (
               <div
-                className="dot-fill"
-                style={{
-                  width: index === currentIndex ? `${progress}%` : "0%",
-                }}
-              ></div>
-            </div>
-          ))}
+                key={index}
+                className={`dot ${index === currentIndex ? "active" : "inactive"}`}
+                onClick={() => setCurrentIndex(index)}
+              >
+                <div
+                  className="dot-fill"
+                  style={{
+                    width: index === currentIndex ? `${progress}%` : "0%",
+                  }}
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
 
-        {/*Arrows*/}
+          {/*Arrows*/}
 
-        <button 
-          className="carousel-arrow left"
-          onClick = {() =>
-              setCurrentIndex(
-                currentIndex === 0 ? slides.length - 1 : currentIndex - 1
-              )
-          }
-        >
-          ❮
-        </button>
+          <button 
+            className="carousel-arrow left"
+            onClick = {() =>
+                setCurrentIndex(
+                  currentIndex === 0 ? slides.length - 1 : currentIndex - 1
+                )
+            }
+          >
+            ❮
+          </button>
 
-        <button
-          className="carousel-arrow right"
-          onClick = {() =>
-              setCurrentIndex(
-                currentIndex === 0 ? slides.length - 1 : currentIndex + 1 
-              )
-          }
-        >
-          ❯
-        </button>
-    </div>
+          <button
+            className="carousel-arrow right"
+            onClick = {() =>
+                setCurrentIndex(
+                  currentIndex === 0 ? slides.length - 1 : currentIndex + 1 
+                )
+            }
+          >
+            ❯
+          </button>
+        </div>
+    </>
   );
 
 }
