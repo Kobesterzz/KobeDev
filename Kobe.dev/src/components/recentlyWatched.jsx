@@ -11,6 +11,7 @@ export default function RecentlyWatched() {
           MediaListCollection(userName: "Kobe5haw", type: ANIME, status: COMPLETED, sort: UPDATED_TIME_DESC) {
             lists {
               entries {
+              score
                 media {
                   title { english romaji }
                   coverImage { large }
@@ -49,7 +50,8 @@ export default function RecentlyWatched() {
             <a href={item.media.siteUrl} target="_blank" rel="noopener noreferrer">
               <img src={item.media.coverImage.large} alt={item.media.title.romaji} />
             </a>
-            <p>{item.media.title.romaji}</p>
+            <p>{item.media.title.english}</p>
+             <p className="rating"> {item.score || "N/A"}/10</p>
           </div>
         ))}
       </div>
