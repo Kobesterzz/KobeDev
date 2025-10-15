@@ -268,8 +268,9 @@
   margin-left: 4%;
   margin-right: 4%;
   column-gap: 35%;
-  height: 20vh;
-  margin-bottom: 10%;
+  height: 40vh;
+
+  background-color: #000000;
 }
 
 .aboutmeHeaders{
@@ -305,6 +306,7 @@
   padding: 0 40px;
   color: #fff;
   text-align: left;
+  z-index: 10;
 }
 
 .section-title {
@@ -314,6 +316,15 @@
   text-align: left;
   padding-left: 5px;
 }
+
+.count {
+  color: #ff7b00;     /* a bright accent color */
+  font-weight: 600;
+  margin-left: 6px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
 
 .carousel {
   display: flex;
@@ -329,7 +340,7 @@
 
 .carousel::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .anime-card {
@@ -343,7 +354,6 @@
   width: 100%;
   height: 260px;
   object-fit: cover;
-  border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -357,5 +367,68 @@
   color: #ccc;
 }
 
+/* top 5 section */
+/* Container holding both sections */
+.top-and-recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  height: 50vh;
+  padding-top:10%;
+  margin-left: 6px;
+  margin-right: 6px;
 
+}
 
+.top-five-section {
+  flex: 1;
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+  min-width: 50%;
+}
+
+.recommend-section {
+  flex: 1;
+  min-width: 50%;
+}
+
+.top-five-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bubble {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
+}
+
+.bubble-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.rank-number {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 17px;
+  height: 20px;
+  background-color: #ff7b00;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 3px 6px;
+  border-radius: 50%;
+  z-index: 2;
+}
