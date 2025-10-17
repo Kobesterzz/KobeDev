@@ -391,6 +391,32 @@
   min-width: 50%;
 }
 
+.bubble-img:hover{
+  filter: grayscale() blur(2px) brightness(50%);
+  transition:  1s ease-in-out;
+
+}
+
+.bubble:hover{
+  .title{
+    display:block
+  }
+}
+
+.title{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff7b00;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: none;
+  z-index: 3;
+  pointer-events: none; 
+}
+
 .recommend-section {
   flex: 1;
   min-width: 50%;

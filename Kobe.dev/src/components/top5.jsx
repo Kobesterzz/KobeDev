@@ -48,6 +48,7 @@ export default function Top5() {
                     <div key={index} className="bubble">
                         <span className="rank-number">{item.rank}</span>
                         <img src={item.img} alt={item.title} className="bubble-img" />
+                        <h1 className="title">{item.title}</h1>
                     </div>
                 ))}
                 </div>
