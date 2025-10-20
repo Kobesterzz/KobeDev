@@ -43,7 +43,9 @@ export default function RecentlyWatched() {
 
   return (
    <section className="anime-section">
-      <h2 className="section-title">My Recently Watched <span className="count">({animeList.length})</span></h2>
+      <div className="titleSection">
+        <h2 className="section-title">My Recently Watched <span className="count">({animeList.length})</span></h2><hr></hr>
+      </div>
       <div className="carousel">
         {animeList.map((item, index) => (
           <div key={index} className="anime-card">

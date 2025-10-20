@@ -42,7 +42,9 @@ export default function Top5() {
         <section className="top-and-recommend">
             {/* Left Side — My Top 5 */}
             <div className="top-five-section">
-                <h2 className="section-title">My Top 5</h2>
+                <div className="titleSection">
+                    <h2 className="section-title">My Top 5</h2><hr></hr>
+                </div>
                 <div className="top-five-container">
                 {topFive.map((item, index) => (
                     <div key={index} className="bubble">
@@ -56,12 +58,14 @@ export default function Top5() {
 
             {/* Right Side — Recommend Me an Anime */}
             <div className="recommend-section">
-                <h2 className="section-title">Recommend Me an Anime</h2>
+                <div className="titleSection">
+                    <h2 className="section-title">Recommend Me</h2> <hr className="line"></hr>
+                </div>
                 <div className="recommend-box">
-                <p>Feeling undecided? Click below to get a random anime recommendation!</p>
-                <button className="recommend-btn" onClick={handleRecommend}>
-                    Recommend Me
-                </button>
+                    <p>Feeling undecided? Click below to get a random anime recommendation!</p>
+                    <button className="recommend-btn" onClick={handleRecommend}>
+                        Recommend Me
+                    </button>
                 </div>
             </div>
         </section>
