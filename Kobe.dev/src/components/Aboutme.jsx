@@ -1,4 +1,5 @@
 import MeIMG from '../img/MeIMG.jpeg'
+import '../css/ComponentsCss/AboutMe.css'
 
 function AboutMe(){
 

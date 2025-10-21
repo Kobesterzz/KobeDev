@@ -1,0 +1,49 @@
+/*about Me section*/
+.aboutMe{
+  display:flex;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  column-gap: 35%;
+  height: 40vh;
+
+  background-color: #000000;
+}
+
+.aboutmeHeaders{
+  display:flex;
+  flex-direction: row;
+  column-gap: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.MeIMG{
+  width:150px;
+  aspect-ratio: 1 / 1;      
+  border-radius: 50%;       
+  object-fit: cover;  
+}
+
+
+.Name{
+  font-size: 60px;
+  color: #ff8c00;
+}
+
+.title{
+  font-size: 30px;
+  color: #cccccc;
+}
+
+.titleSection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+hr{
+  width:80%;
+}

@@ -1,0 +1,69 @@
+/*recently Watched*/
+
+.anime-section {
+  margin-top: 40px;
+  padding: 0 40px;
+  color: #fff;
+  text-align: left;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.count {
+  color: #ff7b00;     /* a bright accent color */
+  font-weight: 600;
+  margin-left: 6px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 0px;
+}
+
+.anime-card {
+  flex: 0 0 auto;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anime-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+  filter: grayscale()  brightness(50%);
+  transition: 1s;
+}
+
+.anime-card p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
+}

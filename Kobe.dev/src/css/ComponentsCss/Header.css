@@ -1,0 +1,113 @@
+*{
+    align-items: center;
+    padding: 0;
+    font-family: Maven Pro ;
+}
+
+/* Header container */
+.header {
+  height: 7vh;
+  width: 100%;
+  background-color: #272727;
+  color: rgb(255, 255, 255);
+  font-family: 'Maven Pro', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* stays at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Spacing between left and right */
+.spacing {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side with logo + links */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logoArea{
+  display: flex;
+  flex-direction: row;
+  column-gap: 0px;
+}
+
+.logoArea h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ff8c00;
+}
+
+.logo{
+  height:30px;
+}
+/* Navigation links */
+.list a {
+  color: #aeaeae;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.list a:hover {
+  color: #ff8c00; /* Crunchyroll orange */
+}
+
+/* Right side with profile image */
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  aspect-ratio: 1 / 1;      /* ensures it's always a perfect square */
+  border-radius: 50%;       /* makes it circular */
+  object-fit: cover;        /* keeps proportions inside the circle */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;           /* prevents inline spacing bugs */
+}
+
+
+.Comptitle{
+  z-index: 20;
+  background-color: #27272700;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+/* Notification dot */
+.notification-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4d00;
+  border: 3px solid #272727; /* clean edge */
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+

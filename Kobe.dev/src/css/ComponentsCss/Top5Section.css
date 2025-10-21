@@ -1,0 +1,360 @@
+/* top 5 section */
+
+
+/* Container holding both sections */
+.top-and-recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+  width: 95%;
+  height: 50vh;
+  padding-top:10%;
+
+}
+
+.top-five-section {
+  flex: 1;
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+  max-width: 45%;
+  min-height: 100%;
+}
+
+.bubble-img:hover{
+  filter: grayscale() blur(2px) brightness(50%);
+  transition:  1s ease-in-out;
+
+}
+
+.bubble:hover{
+  .title{
+    display:block
+  }
+}
+
+.title{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff7b00;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: none;
+  z-index: 3;
+  pointer-events: none; 
+}
+
+.top-five-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  
+}
+
+.bubble {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
+}
+
+.bubble-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.rank-number {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 17px;
+  height: 20px;
+  background-color: #ff7b00;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 3px 6px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Recommend Section Styling */
+.recommend-section {
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  
+  width: 100%;
+  max-width: 45%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.recommend-section .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #3a3a3a47;
+  box-shadow: 0 0 8px #2b292651;
+}
+
+.search-bar {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+.search-btn {
+  background: #ff7b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background: #ff7b00;
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 1rem;
+  overflow-y: auto;  /* ✅ Enables scrolling */
+  flex-grow: 1;
+  max-height: 50vh;  /* ✅ Controls scroll area size */
+  padding-right: 0.5rem; /* Add a little breathing room */
+  row-gap: 10px;
+}
+
+/* Optional: custom scrollbar styling for a cleaner look */
+.search-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.anime-result {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border: 1px solid #2b2b2b;
+  min-width: 90%;
+  border-radius: 15px;
+  padding: 0.8rem;
+  transition: all 0.2s ease;
+  row-gap: 10px;
+}
+
+.anime-result:hover {
+  background: #4b3c2f;
+  transform: scale(1.02);
+}
+
+.anime-thumb {
+  width: 60px;
+  height: 85px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.anime-result p {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.add-btn {
+  background: #ff7b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #683200;
+}
+
+/* User List Section */
+.recommend-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-right: 0.5rem;
+
+  /* Make the list scrollable */
+  max-height: 36vh;   /* controls how tall the visible list is */
+  min-height: 100vh;
+  overflow-y: auto;   /* allows vertical scrolling */
+  overflow-x: hidden; /* hides horizontal scroll */
+}
+
+.recommend-btn{
+    background: #ff7b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.anime-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.genre-tag {
+  background-color: #ff7b00; /* Crunchyroll orange */
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+
+.no-genres {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+
+/* Optional: nice scrollbar styling */
+.recommend-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recommend-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+.recommend-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.recommend-list h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #ff7b00;
+}
+
+/* ===== MODAL POPUP ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #111;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;  /* ✅ Prevents modal from overflowing screen */
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease-in-out;
+  overflow: hidden; /* Keeps header & search bar fixed visually */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #00bfff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

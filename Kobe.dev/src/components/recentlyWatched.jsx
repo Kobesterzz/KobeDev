@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../css/Components.css'
+import '../css/ComponentsCss/RecentlyWatched.css'
 
 export default function RecentlyWatched() {
   const [animeList, setAnimeList] = useState([]);

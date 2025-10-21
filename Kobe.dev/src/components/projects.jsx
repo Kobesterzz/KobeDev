@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import "../css/Components.css";
+import "../css/ComponentsCss/Project.css";
 import bycylcle from "../img/ProjectImg/bycycle.jpg";
 import Crypto from "../img/ProjectImg/Crypto.jpg";
-import NuCampHeader from "../img/ProjectImg/NuCampHeader.jpg";
+import Nature from "../img/ProjectImg/Nature.jpg";
 import art from "../img/ProjectImg/art.jpg";
 
 function Projects() {
@@ -26,7 +26,7 @@ function Projects() {
       buttonText: "Explore Project",
     },
     {
-      img: NuCampHeader,
+      img: Nature,
       title: "NuCamp Website",
       description:
         "A responsive and modern website built for the NuCamp bootcamp community.",

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../css/Components.css";
+import React, { useState, useEffect } from "react";
+import "../css/ComponentsCss/Top5Section.css";
 
 export default function Top5() {
   const topFive = [
@@ -33,7 +33,6 @@ export default function Top5() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const [recommendList, setRecommendList] = useState([]);
 
   // Fetch anime data from Jikan API
   const searchAnime = async (e) => {
@@ -60,6 +59,16 @@ export default function Top5() {
     }
   };
 
+  //saves recommend list
+  const [recommendList, setRecommendList] = useState(() => {
+    const saved = localStorage.getItem("recommendList");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect (() => {
+    localStorage.setItem("recommendList", JSON.stringify(recommendList));
+  }, [recommendList]);
+
   return (
     <section className="top-and-recommend">
       {/* LEFT — My Top 5 */}
@@ -82,7 +91,7 @@ export default function Top5() {
       {/* RIGHT — Recommend Me Section */}
       <div className="recommend-section">
         <div className="titleSection">
-          <h2 className="section-title">Recommend Me</h2>
+          <h2 className="section-title">What Others Recommend</h2>
           <button
             className="recommend-btn"
             onClick={() => setIsModalOpen(true)}
@@ -93,7 +102,6 @@ export default function Top5() {
 
 
         {/* Display user's recommendation list */}
-        <h3>Your List</h3>
         <div className="recommend-list">
           {recommendList.length === 0 && <p>No anime added yet.</p>}
           {recommendList.map((anime) => (
@@ -103,7 +111,21 @@ export default function Top5() {
                 alt={anime.title}
                 className="anime-thumb"
               />
-              <p>{anime.title}</p>
+              <div className='cardContent'>
+                <p>{anime.title}</p>
+                <div className="anime-genres">
+                  {anime.genres && anime.genres.length > 0 ? (
+                    anime.genres.slice(0, 3).map((g) => (
+                      <span key={g.mal_id} className="genre-tag">
+                        {g.name}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="no-genres">No genres available</span>
+                  )}
+                </div>
+
+              </div>
             </div>
           ))}
         </div>
@@ -151,7 +173,23 @@ export default function Top5() {
                     alt={anime.title}
                     className="anime-thumb"
                   />
-                  <p>{anime.title}</p>
+
+                  <div>
+                    <p>{anime.title}</p>
+                    <div className="anime-genres">
+                      {anime.genres && anime.genres.length > 0 ? (
+                        anime.genres.slice(0, 3).map((g) => (
+                          <span key={g.mal_id} className="genre-tag">
+                            {g.name}
+                          </span>
+                        ))
+                      ) : (
+                        <span className="no-genres">No genres available</span>
+                      )}
+                    </div>
+
+                  </div>
+
                   <button
                     className="add-btn"
                     onClick={() => addToList(anime)}
