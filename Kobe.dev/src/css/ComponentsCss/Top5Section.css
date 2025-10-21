@@ -10,7 +10,7 @@
   width: 95%;
   height: 50vh;
   padding-top:10%;
-
+  background-color: #000000;
 }
 
 .top-five-section {
@@ -61,8 +61,8 @@
 
 .bubble {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   
 }
@@ -78,12 +78,13 @@
   position: absolute;
   top: 4px;
   right: 6px;
-  width: 17px;
-  height: 20px;
+  width: 30px;
+  height: 34px;
   background-color: #ff7b00;
+  border: 5px solid #1c1c1c; /* clean edge */
   color: white;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   padding: 3px 6px;
   border-radius: 50%;
   z-index: 2;
@@ -177,6 +178,7 @@
 .anime-result {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background: #1a1a1a;
   border: 1px solid #2b2b2b;
   min-width: 90%;
@@ -247,15 +249,22 @@
   transition: 0.2s;
 }
 
+
+.cardContent{
+  display: flex;
+  flex-direction: column;
+}
+
 .anime-genres {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 6px;
   margin-top: 6px;
 }
 
 .genre-tag {
-  background-color: #ff7b00; /* Crunchyroll orange */
+  background-color: #ff7b0079; /* Crunchyroll orange */
   color: #fff;
   padding: 4px 8px;
   border-radius: 6px;

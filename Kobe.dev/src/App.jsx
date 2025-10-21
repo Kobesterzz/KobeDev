@@ -12,8 +12,9 @@ function App() {
       <Header/>
       <Projects/>
       <RecentlyWatched/>
-      <Top5/>
       <AboutMe/>
+      <Top5/>
+      
     </>
   )
 }
