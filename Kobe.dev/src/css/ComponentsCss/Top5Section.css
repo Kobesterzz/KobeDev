@@ -137,9 +137,10 @@
 }
 
 .search-btn {
-  background: #ff7b00;
+  background: #ff7b0000;
   color: #fff;
-  border: none;
+  border: 1px solid white;
+  
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -147,9 +148,11 @@
   transition: 0.2s;
 }
 
-.search-btn:hover {
-  background: #ff7b00;
+.search-btn:hover{
+  border-color: #ff7b00;
+  color: #ff7b00;
 }
+
 
 /* Search Results */
 .search-results {
@@ -209,9 +212,10 @@
 }
 
 .add-btn {
-  background: #ff7b00;
+  background: #ff7b0000;
   color: #fff;
   border: none;
+  border: 1px solid white;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -219,9 +223,12 @@
   transition: 0.2s;
 }
 
-.add-btn:hover {
-  background: #683200;
+.add-btn:hover{
+  border-color: #ff7b00;
+  color: #ff7b00;
 }
+
+
 
 /* User List Section */
 .recommend-list {
@@ -239,14 +246,19 @@
 }
 
 .recommend-btn{
-    background: #ff7b00;
+    background: #ff7b0000;
   color: #fff;
-  border: none;
+  border: 1px solid white;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
   transition: 0.2s;
+}
+
+.recommend-btn:hover{
+  border-color: #ff7b00;
+  color: #ff7b00;
 }
 
 
@@ -353,7 +365,7 @@
 }
 
 .close-btn:hover {
-  color: #00bfff;
+  color: #ff7b00;
 }
 
 @keyframes fadeIn {

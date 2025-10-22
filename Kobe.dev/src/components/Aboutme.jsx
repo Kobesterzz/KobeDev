@@ -1,41 +1,30 @@
 import MeIMG from '../img/MeIMG.jpeg'
 import '../css/ComponentsCss/AboutMe.css'
 
-function AboutMe(){
+function AboutMe() {
+  return (
+    <div className='aboutMe'>
+      <div className="card dark">
+        <img src={MeIMG} alt="Kobe Shaw" />
+        <section>
+          <h2>Kobe Shaw</h2>
+          <p>Student with startup experience, skilled in problem-solving and teamwork.</p>
 
-    return(
-        <div className='aboutMe'>
-            <div className='column1'>
-                
-                <h1 className='Name' >Kobe Shaw</h1>
-                <h1 className='title' >Computer Science Student UT Arlignton | SWE</h1>
-                <div className='aboutmeHeaders'>
-                    <div>
-                        <li>
-                            Start Up swe Intern
-                        </li>
-                        <li>
-                            Tech Enthusiast
-                        </li>
-                    </div>
-                    <div>
-                        <li>
-                            Computer Science Student
-                        </li>
-                        <li>
-                            Problem Solver
-                        </li>
-                    </div>
-
-                </div>
-
+            <div className="social-icons">
+                <a href="https://x.com/yourhandle" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" />
+                </a>
+                <a href="https://github.com/yourhandle" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+                </a>
+                <a href="https://linkedin.com/in/yourhandle" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+                </a>
             </div>
-            <div className='column2'>
-                <img src={MeIMG} className='MeIMG'></img>
-                <span class="notification-dot"></span>
-            </div>
-        </div>
-    );
+        </section>
+      </div>
+    </div>
+  );
 }
 
 export default AboutMe;
