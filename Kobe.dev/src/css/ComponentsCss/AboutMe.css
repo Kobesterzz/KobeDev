@@ -1,8 +1,8 @@
 
 /* ---------------- CARD BASE ---------------- */
 .card {
-  --bg: #fff;
-  --title-color: #fff;
+  --bg: #ccc;
+  --title-color: #ccc;
   --title-color-hover: #000;
   --text-color: #666;
   --button-color: #eee;
@@ -48,7 +48,7 @@
   aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: 50% 5%;
-  border-radius: 1.5rem;
+  border-radius: 6px;
   display: block;
   transition: aspect-ratio 0.25s, object-position 0.5s;
   width: 100%;

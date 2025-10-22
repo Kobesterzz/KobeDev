@@ -17,11 +17,19 @@
   flex: 1;
   background: #1c1c1c;
   padding: 1.5rem;
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
   max-width: 45%;
   min-height: 100%;
+  color: #e7e7e7;
+  transition: transform 0.5s ease-in-out;
 }
+
+.top-five-section:hover {
+  transform: scale(1.04);
+  background: #1f1f1f;
+}
+
 
 .bubble-img:hover{
   filter: grayscale() blur(2px) brightness(50%);
@@ -82,7 +90,7 @@
   height: 34px;
   background-color: #ff7b00;
   border: 5px solid #1c1c1c; /* clean edge */
-  color: white;
+  color: ccc;
   font-weight: bold;
   font-size: 1.4rem;
   padding: 3px 6px;
@@ -93,14 +101,21 @@
 /* Recommend Section Styling */
 .recommend-section {
   background: #1c1c1c;
-  color: #fff;
-  border-radius: 20px;
+  color: #e7e7e7;
+  border-radius: 6px;
   padding: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+
   
   width: 100%;
   max-width: 45%;
   max-height: 100%;
   margin: 0 auto;
+}
+
+.recommend-section:hover {
+  transform: scale(1.04);
+  background: #1f1f1f;
 }
 
 .recommend-section .section-title {
@@ -213,9 +228,9 @@
 
 .add-btn {
   background: #ff7b0000;
-  color: #fff;
+  color: #ccc;
   border: none;
-  border: 1px solid white;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -245,10 +260,15 @@
   overflow-x: hidden; /* hides horizontal scroll */
 }
 
+.recommend-list:hover {
+  transform: scale(1.04);
+  background: #1f1f1f;
+}
+
 .recommend-btn{
     background: #ff7b0000;
-  color: #fff;
-  border: 1px solid white;
+  color: #e6e6e6;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
