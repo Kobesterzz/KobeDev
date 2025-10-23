@@ -208,7 +208,7 @@
 
 .anime-result:hover {
   background: #4b3c2f;
-  transform: scale(1.02);
+  transform: scale(1.06);
 }
 
 .anime-thumb {
@@ -260,10 +260,7 @@
   overflow-x: hidden; /* hides horizontal scroll */
 }
 
-.recommend-list:hover {
-  transform: scale(1.04);
-  background: #1f1f1f;
-}
+
 
 .recommend-btn{
     background: #ff7b0000;

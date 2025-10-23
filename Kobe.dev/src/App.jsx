@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Projects from './components/Projects'
-import AboutMe from './components/AboutMe'
+import MeExp from './components/MeExp'
 import RecentlyWatched from "./components/recentlyWatched"
 import Top5 from "./components/top5"
 import './css/App.css'
@@ -11,8 +11,8 @@ function App() {
     <>
       <Header/>
       <Projects/>
+      <MeExp/>
       <RecentlyWatched/>
-      <AboutMe/>
       <Top5/>
       
     </>

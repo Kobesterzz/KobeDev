@@ -1,0 +1,53 @@
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.block{
+    background-color: #1c1c1c;
+    width: 80%;
+    border-radius: 6px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.block:hover {
+  transform: scale(1.04);
+  background: #1f1f1f;
+}
+
+.blockContent{
+    padding: 1%;
+}
+
+.TopBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blockTitle{
+    font-size: 1.5rem;
+}
+
+.blockDate{
+    font-size: 1.1rem;
+    color: #6d6d6d;
+}
+
+.bottomBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.SubTitle{
+    font-size: 1.1rem;
+}
+
+.description{
+    color: #6d6d6d;
+}
