@@ -1,8 +1,9 @@
 import AboutMe from './Aboutme'
 import Experience from './experience'
+import '../css/ComponentsCss/meExp.css'
 
 
-function  MeExp(){
+function MeExp(){
 
     return(
         <>

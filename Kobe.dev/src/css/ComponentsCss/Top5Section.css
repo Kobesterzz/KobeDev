@@ -84,7 +84,7 @@
 
 .rank-number {
   position: absolute;
-  top: 4px;
+  bottom: 4px;
   right: 6px;
   width: 30px;
   height: 34px;

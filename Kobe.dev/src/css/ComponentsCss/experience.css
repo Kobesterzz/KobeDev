@@ -7,47 +7,60 @@
   color: rgb(255, 255, 255);
 }
 
+.roadMap{
+    flex-direction: column;
+    row-gap: 10px;
+    display: flex;
+}
+
 .block{
     background-color: #1c1c1c;
-    width: 80%;
+    width: 90%;
     border-radius: 6px;
     transition: transform 0.5s ease-in-out;
+    margin-bottom: 2rem;
 }
 
 .block:hover {
-  transform: scale(1.04);
+  transform: scale(1.001);
   background: #1f1f1f;
 }
 
 .blockContent{
     padding: 1%;
-}
-
-.TopBlock{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.leftexpBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .blockTitle{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .blockDate{
-    font-size: 1.1rem;
+    font-size:  .875rem;;
     color: #6d6d6d;
 }
 
-.bottomBlock{
+.rightexpBlock{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .SubTitle{
-    font-size: 1.1rem;
+    font-size: .875rem;
 }
 
 .description{
     color: #6d6d6d;
+    font-size: .9rem;
+    max-width: 80%;
 }
