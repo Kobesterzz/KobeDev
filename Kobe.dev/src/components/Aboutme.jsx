@@ -4,6 +4,9 @@ import '../css/ComponentsCss/AboutMe.css'
 function AboutMe() {
   return (
     <div className='aboutMe'>
+
+      
+
       <div className="card dark">
         <img src={MeIMG} alt="Kobe Shaw" />
         <section>

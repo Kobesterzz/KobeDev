@@ -9,9 +9,9 @@
   --button-color-hover: #ddd;
   background: var(--bg);
   border-radius: 2rem;
-  padding: 0.5rem;
-  width: 30rem;
-  height: 40rem;
+  padding: 1.5rem;
+  width: 80%;
+  height: 42.5rem;
   overflow: hidden;
   position: relative;
   font-family: Lato, Montserrat, Helvetica, Arial, sans-serif;
@@ -19,7 +19,7 @@
 
 /* Dark variant */
 .card.dark {
-  --bg: #000000;
+  --bg: #1c1c1c;
   --title-color: #fff;
   --title-color-hover: #fff;
   --text-color: #ccc;

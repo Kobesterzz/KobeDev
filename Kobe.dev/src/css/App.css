@@ -12,3 +12,33 @@
   color: #888;
 }
 
+.contentPadding{
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 5%;
+  color: rgb(255, 255, 255);
+}
+
+.line{
+    width: 90%;
+}
+
+.headings{
+  display: flex;
+  width: 100%;
+}
+
+.titleSectionleft{
+  width: 40%;
+}
+
+.titleSectionright{
+  width:60%;
+}

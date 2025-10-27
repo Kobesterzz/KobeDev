@@ -11,9 +11,24 @@ function App() {
     <>
       <Header/>
       <Projects/>
-      <MeExp/>
-      <RecentlyWatched/>
-      <Top5/>
+
+      <div className='contentPadding'>
+        
+        <div className='headings'>
+          <div className="titleSectionleft">
+            <h2 className="experience-title">About Me</h2>
+            <hr className="line" />
+          </div>
+          <div className="titleSectionright">
+            <h2 className="experience-title">Experience</h2>
+            <hr className="line" />
+          </div>
+        </div>
+
+        <MeExp/>
+        <RecentlyWatched/>
+        <Top5/>
+      </div>
       
     </>
   )

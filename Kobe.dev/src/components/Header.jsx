@@ -13,7 +13,6 @@ function Header() {
               <div className='list'>
                 <a>Projects</a>
                 <a>About Me</a>
-                <a>Experience</a>
                 <a>More</a>
               </div>
           </div>
