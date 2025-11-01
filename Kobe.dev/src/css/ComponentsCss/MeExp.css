@@ -5,8 +5,10 @@
 
 .leftBlock{
     width: 40%;
+
 }
 
 .rightBlock{
     width: 60%;
+    min-height: 40vh;
 }
