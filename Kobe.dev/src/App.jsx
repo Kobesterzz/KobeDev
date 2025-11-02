@@ -3,6 +3,7 @@ import Projects from './components/Projects'
 import MeExp from './components/MeExp'
 import RecentlyWatched from "./components/recentlyWatched"
 import Top5 from "./components/top5"
+import ModelingPhoto from "./components/modelingAndPhoto"
 import './css/App.css'
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
 
         <MeExp/>
         <RecentlyWatched/>
-        <Top5/>
+        {/*<Top5/>*/}
+        <ModelingPhoto/>
+
       </div>
       
     </>
