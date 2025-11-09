@@ -4,11 +4,12 @@
   row-gap: 10px;
   width: 100%;
   align-items: center;
+  padding-top: 10%;
 }
 
 .block {
   background-color: #1c1c1c;
-  width: 90%;
+  width: 93%;
   border-radius: 6px;
   transition: transform 0.5s ease-in-out;
   margin-bottom: 1rem;

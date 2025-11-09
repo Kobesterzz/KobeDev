@@ -43,7 +43,7 @@ export default function RecentlyWatched() {
 
   return (
    <section className="anime-section">
-      <div className="titleSection">
+      <div className="recentlytitleSection">
         <h2 className="section-title">My Recently Watched </h2><span><h2 className="count">({animeList.length})</h2></span>
       </div>
       <div className="carousel">

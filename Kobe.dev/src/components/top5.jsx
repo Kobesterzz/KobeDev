@@ -78,7 +78,6 @@ const addToList = (anime) => {
       <div className="top-five-section">
         <div className="titleSection">
           <h2 className="section-title">My Top 5</h2>
-          <hr />
         </div>
         <div className="top-five-container">
           {topFive.map((item, index) => (

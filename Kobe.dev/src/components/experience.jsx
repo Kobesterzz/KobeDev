@@ -36,8 +36,8 @@ function  Experience() {
 
         <div className="titleSectionright">
             <h2 className="experience-title">Experience</h2>
-            <hr className="line" />
-          </div>
+            
+        </div>
           
         {expBlock.map((item, index) => (
           <div key={index} className="block">

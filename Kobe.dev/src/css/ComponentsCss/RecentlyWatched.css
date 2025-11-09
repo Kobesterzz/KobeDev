@@ -7,13 +7,13 @@
   z-index: 10;
 }
 
-.titleSection {
+.recentlytitleSection {
   display: flex;
   flex-direction: row;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
   margin-bottom: 10px;
   text-align: left;
@@ -133,9 +133,6 @@ hr{
     padding-left: 0;
   }
 
-  .titleSection hr {
-    display: none; /* hide divider on small screens for cleaner layout */
-  }
 
   .anime-card p {
     font-size: 0.8rem;
