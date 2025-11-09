@@ -1,10 +1,8 @@
-
-/*Projects*/
-
+/* Projects */
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 75vh; /* same as Crunchyroll */
+  height: 75vh; /* base desktop height */
   overflow: hidden;
 }
 
@@ -32,18 +30,19 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.881) 20%,
-    rgba(0, 0, 0, 0.48) 40%,
-    rgba(0, 0, 0, 0.227) 70%,
-    rgba(0, 0, 0, 0) 100%
-  ), linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.971) 20%,
-    rgba(0, 0, 0, 0.6) 40%,
-    rgba(0, 0, 0, 0.3) 70%,
-    rgba(0, 0, 0, 0) 100%
-  ); 
+      to right,
+      rgba(0, 0, 0, 0.881) 20%,
+      rgba(0, 0, 0, 0.48) 40%,
+      rgba(0, 0, 0, 0.227) 70%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.971) 20%,
+      rgba(0, 0, 0, 0.6) 40%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
   pointer-events: none;
   z-index: 1;
 }
@@ -55,7 +54,7 @@
   left: 5%;
   transform: translateY(-50%);
   z-index: 2;
-  color: ccc;
+  color: #ccc;
   max-width: 420px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -64,6 +63,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
+  color: #fff;
 }
 
 .carousel-content p {
@@ -91,6 +91,7 @@
   background: #e55300;
 }
 
+/* Arrows */
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -111,15 +112,14 @@
 }
 
 .carousel-arrow.left {
-  left: 1%;   
+  left: 1%;
   font-size: 30px;
 }
 
 .carousel-arrow.right {
-  right: 1%;  
+  right: 1%;
   font-size: 30px;
 }
-
 
 /* Progress bars */
 .carousel-dots {
@@ -131,7 +131,6 @@
 
 .dot {
   flex: 1;
-  
   background: rgba(255, 255, 255, 0.25);
   border-radius: 2px;
   overflow: hidden;
@@ -140,15 +139,12 @@
 }
 
 .dot.inactive {
-  height: 8px;   /* smaller inactive dots */
-  width: 6px;
+  height: 8px;
   opacity: 0.4;
-  
 }
 
 .dot.active {
-  height: 8px;  /* regular size for active dot */
-  width: 12px;
+  height: 8px;
   opacity: 1;
 }
 
@@ -162,19 +158,112 @@
   transition: width linear;
 }
 
-.profile-container {
-  position: relative;
-  display: inline-block;
+/* Responsive breakpoints */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .carousel-container {
+    height: 65vh;
+  }
+
+  .carousel-content {
+    left: 4%;
+    max-width: 350px;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.95rem;
+  }
+
+  .carousel-content button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .carousel-arrow {
+    font-size: 2rem;
+  }
 }
 
-/* Notification dot */
-.notification-dot {
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  width: 20px;
-  height: 20px;
-  background-color: #ff4d00;
-  border: 3px solid #272727; /* clean edge */
-  border-radius: 50%;
+/* Mobile */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 60vh;
+  }
+
+  .carousel-content {
+    top: auto;
+    bottom: 10%;
+    transform: none;
+    left: 5%;
+    max-width: 85%;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .carousel-content button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .carousel-dots {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .carousel-arrow {
+    top: 45%;
+    font-size: 1.8rem;
+    padding: 10px 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 55vh;
+  }
+
+  .carousel-content {
+    bottom: 8%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.85rem;
+  }
+
+  .carousel-content button {
+    font-size: 0.9rem;
+    padding: 9px 0;
+  }
+
+  .carousel-arrow {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+  }
+
+  .carousel-dots {
+    gap: 6px;
+  }
+
+  .dot {
+    height: 6px;
+  }
 }

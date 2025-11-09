@@ -1,74 +1,46 @@
-.experience-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
+.roadMap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.block {
+  background-color: #1c1c1c;
+  width: 90%;
+  border-radius: 6px;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.blockContent {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftexpBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   text-align: left;
-  padding-left: 5%;
-  color: rgb(255, 255, 255);
 }
 
-.line{
-    width: 90%;
+.blockTitle {
+  font-size: 1.1rem;
 }
 
-.roadMap{
-    flex-direction: column;
-    row-gap: 10px;
-    display: flex;
-}
-
-.block{
-    background-color: #1c1c1c;
-    width: 90%;
-    border-radius: 6px;
-    transition: transform 0.5s ease-in-out;
-    margin-bottom: 1rem;
-}
-
-.block:hover {
-  transform: scale(1.001);
-  background: #1f1f1f;
-}
-
-.blockContent{
-    padding: 3%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.leftexpBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.blockTitle{
-    font-size: 1.1rem;
-    line-height: 10%;
+.description {
+  color: #6d6d6d;
+  font-size: 0.9rem;
+  max-width: 80%;
 }
 
 .blockDate{
-    font-size:  .875rem;;
-    color: #6d6d6d;
-}
-
-.rightexpBlock{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.SubTitle{
-    font-size: .875rem;
-}
-
-.description{
-    color: #6d6d6d;
-    font-size: .9rem;
-    max-width: 80%;
-    text-align: left;
+    font-size: 1.1rem;
 }
 
 .keyTools {
@@ -86,3 +58,53 @@
   border-radius: 8px;
   font-size: 0.85rem;
 }
+
+/* ----------------- Responsive ----------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .blockContent {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .blockTitle {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .block {
+    width: 95%;
+  }
+
+  .blockContent {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 5%;
+  }
+
+  .blockTitle {
+    font-size: 1rem;
+  }
+
+  .SubTitle,
+  .blockDate {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .toolTag {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+}
+

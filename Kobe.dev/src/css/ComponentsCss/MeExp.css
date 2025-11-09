@@ -1,14 +1,51 @@
-.MeExpBlock{
-    display: flex;
-    flex-direction: row;
+.MeExpBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
 }
 
-.leftBlock{
-    width: 40%;
-
+.leftBlock {
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
 
-.rightBlock{
-    width: 60%;
-    min-height: 40vh;
+.rightBlock {
+  width: 60%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------- Responsive ----------------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .MeExpBlock {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 90%;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .MeExpBlock {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+  }
 }

@@ -1,5 +1,4 @@
-/*recently Watched*/
-
+/* =============== Base Styles =============== */
 .anime-section {
   margin-top: 40px;
   padding: 0 40px;
@@ -8,23 +7,28 @@
   z-index: 10;
 }
 
+.titleSection {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: left;
   padding-left: 5px;
 }
 
 .count {
-  color: #ff7b00;     /* a bright accent color */
+  color: #ff7b00;
   font-weight: 600;
   margin-left: 6px;
   font-size: 1rem;
   opacity: 0.9;
 }
 
-
+/* =============== Carousel Layout =============== */
 .carousel {
   display: flex;
   gap: 20px;
@@ -42,11 +46,12 @@
   border-radius: 0px;
 }
 
+/* =============== Anime Card =============== */
 .anime-card {
   flex: 0 0 auto;
   width: 180px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .anime-card img {
@@ -59,12 +64,94 @@
 
 .anime-card:hover {
   transform: scale(1.05);
-  filter: grayscale()  brightness(50%);
-  transition: 1s;
+  filter: grayscale(0.4) brightness(0.9);
 }
 
 .anime-card p {
   margin-top: 8px;
   font-size: 0.9rem;
   color: #ccc;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: #ff7b00;
+  font-weight: 500;
+}
+
+/* =============== Responsive Design =============== */
+
+/* Tablet: reduce card width and spacing */
+@media (max-width: 1024px) {
+  .anime-section {
+    padding: 0 25px;
+  }
+
+  .carousel {
+    gap: 15px;
+  }
+
+  .anime-card {
+    width: 150px;
+  }
+
+  .anime-card img {
+    height: 220px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile: full width, smaller cards, stacked text */
+@media (max-width: 768px) {
+  .anime-section {
+    padding: 0 15px;
+  }
+
+  .carousel {
+    gap: 12px;
+  }
+
+  .anime-card {
+    width: 130px;
+  }
+
+  .anime-card img {
+    height: 190px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .titleSection hr {
+    display: none; /* hide divider on small screens for cleaner layout */
+  }
+
+  .anime-card p {
+    font-size: 0.8rem;
+  }
+
+  .rating {
+    font-size: 0.75rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .anime-card {
+    width: 110px;
+  }
+
+  .anime-card img {
+    height: 160px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
 }

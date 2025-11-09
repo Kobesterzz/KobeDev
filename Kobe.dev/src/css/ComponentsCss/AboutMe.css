@@ -1,17 +1,13 @@
 
 /* ---------------- CARD BASE ---------------- */
 .card {
-  --bg: #ccc;
-  --title-color: #ccc;
-  --title-color-hover: #000;
-  --text-color: #666;
-  --button-color: #eee;
-  --button-color-hover: #ddd;
+  --bg: #1c1c1c;
   background: var(--bg);
   border-radius: 2rem;
   padding: 1.5rem;
   width: 80%;
-  height: 42.5rem;
+  max-width: 400px;
+  height: auto;
   overflow: hidden;
   position: relative;
   font-family: Lato, Montserrat, Helvetica, Arial, sans-serif;
@@ -42,18 +38,14 @@
   transition: translate 0.25s;
 }
 
-/* Card image */
+/* Fix image scaling */
 .card > img {
-  max-width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  object-position: 50% 5%;
-  border-radius: 6px;
-  display: block;
-  transition: aspect-ratio 0.25s, object-position 0.5s;
   width: 100%;
   height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
+
 
 /* Section container */
 .card > section {
@@ -67,7 +59,7 @@
 .card > section h2 {
   margin: 0;
   margin-block-end: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--title-color);
   opacity: 1;
   translate: 0 -200%;
@@ -76,7 +68,7 @@
 
 /* Paragraph text */
 .card > section p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.3;
   color: var(--text-color);
   opacity: 0;
@@ -179,4 +171,63 @@
   translate: 0 0;
   opacity: 1;
   transition: translate 0.25s 0.25s, opacity 0.5s 0.25s;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0.8);
+  transition: filter 0.2s;
+}
+
+.social-icons img:hover {
+  filter: brightness(1);
+  
+}
+
+/* ----------------- Responsive ----------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .card > section h2 {
+    font-size: 1.3rem;
+  }
+
+  .card > section p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .card > section h2 {
+    font-size: 1.2rem;
+  }
+
+  .card > section p {
+    font-size: 0.85rem;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
 }

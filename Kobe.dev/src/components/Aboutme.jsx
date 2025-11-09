@@ -5,6 +5,10 @@ function AboutMe() {
   return (
     <div className='aboutMe'>
 
+      <div className="titleSectionleft">
+            <h2 className="experience-title">About Me</h2>
+            <hr className="line" />
+      </div>
       
 
       <div className="card dark">

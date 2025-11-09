@@ -53,11 +53,14 @@ export default function Top5() {
   };
 
   // Add anime to user's list
-  const addToList = (anime) => {
-    if (!recommendList.some((item) => item.mal_id === anime.mal_id)) {
-      setRecommendList([...recommendList, anime]);
-    }
-  };
+const addToList = (anime) => {
+  if (recommendList.some((item) => item.mal_id === anime.mal_id)) {
+    alert("That anime is already in your list!");
+    return;
+  }
+  setRecommendList([...recommendList, anime]);
+};
+
 
   //saves recommend list
   const [recommendList, setRecommendList] = useState(() => {
@@ -175,7 +178,7 @@ export default function Top5() {
                   />
 
                   <div>
-                    <p>{anime.title}</p>
+                    <p>{anime.title_english || anime.title}</p>
                     <div className="anime-genres">
                       {anime.genres && anime.genres.length > 0 ? (
                         anime.genres.slice(0, 3).map((g) => (

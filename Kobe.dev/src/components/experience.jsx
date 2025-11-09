@@ -30,9 +30,15 @@ function  Experience() {
 
     return (
     <>
-      
+     
 
       <div className='roadMap'>
+
+        <div className="titleSectionright">
+            <h2 className="experience-title">Experience</h2>
+            <hr className="line" />
+          </div>
+          
         {expBlock.map((item, index) => (
           <div key={index} className="block">
             <div className='blockContent'>
