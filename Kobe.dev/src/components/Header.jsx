@@ -12,8 +12,9 @@ function Header() {
               <div className='logoArea'><img className='logo' src={CrunchyrollLogo}/><h1>Kobe</h1></div>
               <div className='list'>
                 <a>Projects</a>
-                <a>About Me</a>
-                <a>More</a>
+                <a>Anime</a>
+                <a>Experience</a>
+                <a>Modeling</a>
               </div>
           </div>
           <div className='right'>

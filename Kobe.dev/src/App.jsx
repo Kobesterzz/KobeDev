@@ -15,11 +15,10 @@ function App() {
       <Projects/>
 
       <div className='contentPadding'>
-        <Experience/>
         <RecentlyWatched/>
         <Top5/>
+        <Experience/>
         <ModelingPhoto/>
-
       </div>
       
     </>

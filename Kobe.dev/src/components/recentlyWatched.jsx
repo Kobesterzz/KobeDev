@@ -14,7 +14,7 @@ export default function RecentlyWatched() {
               score
                 media {
                   title { english romaji }
-                  coverImage { large }
+                  coverImage { extraLarge large }
                   siteUrl
                 }
               }
@@ -44,13 +44,13 @@ export default function RecentlyWatched() {
   return (
    <section className="anime-section">
       <div className="titleSection">
-        <h2 className="section-title">My Recently Watched <span className="count">({animeList.length})</span></h2><hr></hr>
+        <h2 className="section-title">My Recently Watched </h2><span><h2 className="count">({animeList.length})</h2></span>
       </div>
       <div className="carousel">
         {animeList.map((item, index) => (
           <div key={index} className="anime-card">
             <a href={item.media.siteUrl} target="_blank" rel="noopener noreferrer">
-              <img src={item.media.coverImage.large} alt={item.media.title.romaji} />
+              <img src={item.media.coverImage.extraLarge} alt={item.media.title.romaji} />
             </a>
             <p>{item.media.title.english}</p>
              <p className="rating"> {item.score || "N/A"}/10</p>
