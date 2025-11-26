@@ -15,6 +15,9 @@
 .contentPadding{
   padding-left: 10px;
   padding-right:10px;
+  z-index: 20;
+  margin-top:-20%;
+  position: relative;
 }
 
 .experience-title {
