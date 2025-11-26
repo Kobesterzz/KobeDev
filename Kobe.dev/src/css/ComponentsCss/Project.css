@@ -4,6 +4,7 @@
   width: 100%;
   height: 75vh; /* base desktop height */
   overflow: hidden;
+  z-index: 1;
 }
 
 /* Images */
@@ -11,8 +12,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -39,8 +40,8 @@
     linear-gradient(
       to top,
       rgba(0, 0, 0, 0.971) 20%,
-      rgba(0, 0, 0, 0.6) 40%,
-      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.38) 40%,
+      rgba(0, 0, 0, 0.127) 70%,
       rgba(0, 0, 0, 0) 100%
     );
   pointer-events: none;
@@ -132,7 +133,7 @@
 .dot {
   flex: 1;
   background: rgba(255, 255, 255, 0.25);
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -140,7 +141,7 @@
 
 .dot.inactive {
   height: 8px;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .dot.active {
