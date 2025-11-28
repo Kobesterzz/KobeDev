@@ -19,6 +19,7 @@
 
 .block:hover{
   background-color: #333333;
+  box-shadow:5px 5px 10px #ff8c007a;
   transition: 1s ;
   
 }

@@ -27,8 +27,10 @@
 }
 
 .top-five-section:hover {
-  transform: scale(1.04);
-  background: #1f1f1f;
+  transform: scale(1.02);
+   background-color: #333333;
+  box-shadow:5px 5px 10px #ff8c007a;
+  transition: 1s ;
 }
 
 .titleSection{
@@ -120,7 +122,9 @@
 
 .recommend-section:hover {
   transform: scale(1.04);
-  background: #1f1f1f;
+  background-color: #333333;
+  box-shadow:5px 5px 10px #ff8c007a;
+  transition: 1s ;
 }
 
 .recommend-section .section-title {
