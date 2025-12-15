@@ -19,13 +19,13 @@ export default function Top5() {
       rank: 3,
     },
     {
-      title: "Solo Leveling",
-      img: "https://images.immediate.co.uk/production/volatile/sites/3/2025/03/solo-levelling-season-2-finale-993c204.jpg",
+      title: "Zom 100",
+      img: "https://starcrossedanime.com/wp-content/uploads/2023/07/Zom-100-1.2.jpg",
       rank: 4,
     },
     {
-      title: "Zom 100",
-      img: "https://starcrossedanime.com/wp-content/uploads/2023/07/Zom-100-1.2.jpg",
+      title: "Solo Leveling",
+      img: "https://images.immediate.co.uk/production/volatile/sites/3/2025/03/solo-levelling-season-2-finale-993c204.jpg",
       rank: 5,
     },
   ];
