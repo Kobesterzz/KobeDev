@@ -1,11 +1,9 @@
 /* ========== Container ========== */
 .modeling-section {
-  width: 100%;
-  max-width: 90%;
-  margin: 4rem auto;
-  padding: 2rem;
+  
+  margin-top: 4rem;
   background: #1c1c1c;
-  border-radius: 20px;
+  border-radius: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
