@@ -18,7 +18,7 @@ section,
 .modeling-section,
 .anime-section,
 .roadMap  {
-  max-width: 1800px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 40px 60px !important;
 }
@@ -68,7 +68,7 @@ button:focus-visible {
   section,
   .modeling-section,
   .anime-section {
-    padding: 40px 20px !important;
+    padding: 40px 40px !important;
   }
 }
 
