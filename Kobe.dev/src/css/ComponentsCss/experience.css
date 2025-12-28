@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: 10px;
   width: 100%;
+  justify-content: center;
   align-items: center;
   padding-top: 5%;
   margin-top:4rem;
@@ -118,4 +119,3 @@
     padding: 3px 6px;
   }
 }
-
