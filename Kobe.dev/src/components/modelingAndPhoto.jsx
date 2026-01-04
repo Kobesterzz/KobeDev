@@ -3,26 +3,56 @@ import React, { useEffect, useState, useRef } from "react";
 
 export function ModelingPhoto() {
   const scrollRef = useRef(null);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const autoScrollInterval = useRef(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     let scrollAmount = 0;
-    const scrollSpeed = 1; // adjust speed
-    const interval = setInterval(() => {
-      if (scrollContainer) {
-        scrollAmount += scrollSpeed;
-        scrollContainer.scrollLeft = scrollAmount;
+    const scrollSpeed = 1; // slower for smoothness
 
-        // Reset when end is reached
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
-          scrollAmount = 0;
-          scrollContainer.scrollLeft = 0;
+    const startAutoScroll = () => {
+      autoScrollInterval.current = setInterval(() => {
+        if (scrollContainer && isAutoScrolling) {
+          scrollAmount += scrollSpeed;
+          scrollContainer.scrollLeft = scrollAmount;
+
+          // Reset when end is reached
+          if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
+            scrollAmount = 0;
+            scrollContainer.scrollLeft = 0;
+          }
         }
-      }
-    }, 30); // adjust smoothness
+      }, 30);
+    };
 
-    return () => clearInterval(interval);
-  }, []);
+    startAutoScroll(); 
+
+    //pause auto-scroll when user interacts
+    const handleUserScroll = () => {
+      setIsAutoScrolling(false);
+      clearInterval(autoScrollInterval.current);
+
+      //resume scroll after 3 seconds of no user interaction
+      setTimeout(() => {
+      setIsAutoScrolling(true);
+      scrollAmount = scrollContainer.scrollLeft;
+      startAutoScroll
+      }, 10000);
+    };
+
+    scrollContainer?.addEventListener('wheel', handleUserScroll);
+    scrollContainer?.addEventListener('touchstart', handleUserScroll);
+    scrollContainer?.addEventListener('mousedown', handleUserScroll);
+
+
+    return () => {
+      clearInterval(autoScrollInterval.current);
+      scrollContainer?.removeEventListener('wheel', handleUserScroll);
+    scrollContainer?.removeEventListener('touchstart', handleUserScroll);
+    scrollContainer?.removeEventListener('mousedown', handleUserScroll);
+    };
+  }, [isAutoScrolling]);
 
   const [images, setImages] = useState([]);
   const folderId = "1w1Uw__USMO5l20YoFPFRqm4SGWcl3QEc";

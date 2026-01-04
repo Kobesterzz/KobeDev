@@ -16,7 +16,7 @@
 .section-title {
   font-size: 1.8rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  
   text-align: left;
   padding-left: 5px;
   color:#fff;
@@ -28,11 +28,17 @@ hr{
   
 }
 
+.countBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .count {
   color: #ff7b00;
-  font-weight: 600;
   margin-left: 6px;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  font-weight: 800;
   opacity: 0.9;
   
 }

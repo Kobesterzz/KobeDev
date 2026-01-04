@@ -60,6 +60,10 @@
   color: #ccc;
   max-width: 420px;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2%;
+  align-items: center;
 }
 
 .carousel-content h1 {
@@ -111,7 +115,8 @@
 }
 
 .carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.7);
+  color:#e55300;
+  transition: 1s;
 }
 
 .carousel-arrow.left {

@@ -44,7 +44,12 @@ export default function RecentlyWatched() {
   return (
    <section className="anime-section">
       <div className="recentlytitleSection">
-        <h2 className="section-title">My Recently Watched </h2><span><h2 className="count">({animeList.length})</h2></span>
+        <h2 className="section-title">My Recently Watched </h2>
+        <div className="countBox">
+          
+            <h1 className="count">({animeList.length})</h1>
+          
+        </div>
       </div>
       <div className="carousel">
         {animeList.map((item, index) => (

@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Projects from './components/Projects'
 import MeExp from './components/MeExp'
@@ -12,13 +13,18 @@ function App() {
   return (
     <>
       <Header/>
-      <Projects/>
+      <section id="projects"><Projects/></section>
 
       <div className='contentPadding'>
-        <Experience/>
-        <RecentlyWatched/>
-        <Top5/>
-        <ModelingPhoto/>
+        <section id="experience"><Experience/></section>
+
+        <section id="anime">
+          <RecentlyWatched/>
+          <Top5/>
+        </section>
+
+        <section id="modeling"><ModelingPhoto/></section>
+
       </div>
       
     </>

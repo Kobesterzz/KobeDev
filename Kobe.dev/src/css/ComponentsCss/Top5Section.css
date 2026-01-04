@@ -27,9 +27,9 @@
 }
 
 .top-five-section:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
    background-color: #333333;
-  box-shadow:5px 5px 10px #ff8c007a;
+  box-shadow:3px 3px 6px #ff8c007a;
   transition: 1s ;
 }
 
@@ -121,9 +121,9 @@
 }
 
 .recommend-section:hover {
-  transform: scale(1.04);
+  transform: scale(1.01);
   background-color: #333333;
-  box-shadow:5px 5px 10px #ff8c007a;
+  box-shadow:3px 3px 6px #ff8c007a;
   transition: 1s ;
 }
 
