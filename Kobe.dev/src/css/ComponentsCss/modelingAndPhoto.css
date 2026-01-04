@@ -1,11 +1,13 @@
 /* ========== Container ========== */
 .modeling-section {
-  
+  height: 50vh;
+  width: 95%;
   margin-top: 4rem;
   background: #1c1c1c;
   border-radius: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  
 }
 
 .modeling-section h2 {
@@ -29,6 +31,7 @@
   padding-bottom: 1rem;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+
 }
 
 .photo-gallery img {

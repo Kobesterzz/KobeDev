@@ -60,8 +60,10 @@ export default function RecentlyWatched() {
                 style={{backgroundImage: `url(${item.media.coverImage.extraLarge})`}}
               >
                 <div className="anime-overlay">
-                  <p className="anime-title">{item.media.title.english || item.media.title.romaji}</p>
-                  <p className="rating">{item.score || "N/A"}/10</p>
+                  <div className="cardText">
+                    <p className="anime-title">{item.media.title.english || item.media.title.romaji}</p>
+                    <p className="rating">{item.score || "N/A"}/10</p>
+                  </div>
                 </div>
               </div>
             </a>
