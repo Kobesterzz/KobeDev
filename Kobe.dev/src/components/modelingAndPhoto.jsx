@@ -26,7 +26,7 @@ export function ModelingPhoto() {
       }, 30);
     };
 
-    startAutoScroll(); 
+    //startAutoScroll(); 
 
     //pause auto-scroll when user interacts
     const handleUserScroll = () => {
@@ -84,7 +84,7 @@ export function ModelingPhoto() {
 
   return (
     <section className="modeling-section">
-      <h2>Modeling | Photography</h2>
+      <h2 className="SectionTitle">Modeling | Photography</h2>
       <div className="photo-gallery" ref={scrollRef}>
         {images.map((url, i) => (
         <img key={i} src={url} alt={`drive-img-${i}`} />

@@ -91,12 +91,13 @@ hr{
 
 .cardText{
   display:none;
+  color:#ff7b00
 }
 
 .anime-card p {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #ffffff;
+  color: #ff7b00;
 }
 
 

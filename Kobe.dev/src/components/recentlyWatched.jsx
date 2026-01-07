@@ -55,17 +55,18 @@ export default function RecentlyWatched() {
         {animeList.map((item, index) => (
           <div key={index} className="anime-card">
             <a href={item.media.siteUrl} target="_blank" rel="noopener noreferrer">
-               <div 
-                className="anime-image-container"
-                style={{backgroundImage: `url(${item.media.coverImage.extraLarge})`}}
-              >
+              <div 
+                  className="anime-image-container"
+                  style={{backgroundImage: `url(${item.media.coverImage.extraLarge})`}}
+                >
                 <div className="anime-overlay">
                   <div className="cardText">
                     <p className="anime-title">{item.media.title.english || item.media.title.romaji}</p>
-                    <p className="rating">{item.score || "N/A"}/10</p>
+                    <p className="rating">{item.score || "N/A"}/10 <span style={{ color: 'gold', fontSize: '0.9rem' }}>★</span></p>
                   </div>
                 </div>
-              </div>
+                </div>
+                
             </a>
             
           </div>

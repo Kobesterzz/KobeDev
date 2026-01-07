@@ -72,6 +72,16 @@
   position: relative;
 }
 
+.profile-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30%;
+}
+
+.arrow{
+   font-size: 70%;
+}
+
 /* Profile picture */
 .profile-pic {
   width: 45px;

@@ -20,8 +20,11 @@ function Header() {
           </div>
           <div className='right'>
             <div className="profile-container">
-              <img src={Epfp} className='profile-pic'></img>
-              <span className="notification-dot"></span>
+              <div>
+                <img src={Epfp} className='profile-pic'></img>
+                <span className="notification-dot"></span>
+              </div>
+              <span className='arrow'>&#9662;</span>
             </div>
           </div>
         </div>
