@@ -78,8 +78,13 @@
   column-gap: 30%;
 }
 
+.right:hover{
+  background-color: #444444;
+}
+
 .arrow{
    font-size: 70%;
+   color: #aeaeae;
 }
 
 /* Profile picture */
@@ -104,6 +109,21 @@
   border: 3px solid #272727;
   border-radius: 50%;
 }
+
+.premium-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f5c518;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cr-crown {
+  flex-shrink: 0;
+  transform: translateY(-1px);
+}
+
 
 /* --- Responsive Breakpoints --- */
 

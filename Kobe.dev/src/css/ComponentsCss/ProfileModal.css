@@ -1,0 +1,27 @@
+dialog {
+  padding: 20px;
+  border-radius: 8px;
+  border: 0px solid #ccc;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button{
+  border: none;
+}
+
+.premium-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f5c518;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cr-crown {
+  flex-shrink: 0;
+  transform: translateY(-1px);
+}
